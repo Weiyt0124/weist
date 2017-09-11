@@ -14,7 +14,7 @@ import java.util.Map;
 @Mapper
 public interface MessageBoardMapper {
     /**
-     *  查询回复列表权重排序:5
+     *  查询回复列表权重排序:10
      *  @Author Wyt
      *
      *  @Date 2017/9/11 14:22
