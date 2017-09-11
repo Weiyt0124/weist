@@ -20,12 +20,13 @@ public interface MessageBoardMapper {
      *  @Date 2017/9/11 14:22
      *
      */
-    @Select("select u.avatar,r.* from reply as r LEFT JOIN user u on u.id = r.uid  ORDER BY r.weight desc limit 10")
+    @Select("select u.avatar,u.nickname,r.* from reply as r LEFT JOIN user u on u.id = r.uid  ORDER BY r.weight desc limit 10")
     @Results({
             @Result(property="userId",column="uid"),
             @Result(property="createTime",column="create_time"),
             @Result(property="updateTime",column="update_time"),
             @Result(property="avatar",column="avatar"),
+            @Result(property="nickName",column="nickname"),
             @Result(property="title",column="title"),
             @Result(property="weight",column="weight"),
             @Result(property="content",column="content"),

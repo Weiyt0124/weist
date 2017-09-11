@@ -1,5 +1,6 @@
 package com.wyt.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -15,7 +16,8 @@ public class UserInfo {
     private String id;
     private String name;
     private String password;
-    private String nickname;
+    @Column(name="nickname")
+    private String nickName;
 
     public String getAvatar() {
         return avatar;
@@ -27,11 +29,11 @@ public class UserInfo {
 
     private String avatar;
     public String getNickname() {
-        return nickname;
+        return nickName;
     }
 
     public void setNickname(String nickname) {
-        this.nickname = nickname;
+        this.nickName = nickname;
     }
 
     public String getId() {
