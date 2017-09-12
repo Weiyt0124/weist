@@ -251,9 +251,9 @@
             <h3>留言板</h3>
 
             <!-- First Action -->
-            <div class="desc" ng-repeat="x in data">
+            <div class="desc" ng-repeat="data in data">
                 <div class="thumb">
-                    <img class="img-circle" ng-src="{{x.avatar}}" width="35px" height="35px" align="">
+                    <img class="img-circle" ng-src="{{data.avatar}}" width="35px" height="35px" align="">
                 </div>
                 <!--<div class="details" >-->
                     <!--<p>-->
@@ -263,8 +263,8 @@
                     <!--</p>-->
                 <!--</div>-->
                 <div class="details">
-                    <p><a href="#">{{x.nickName}}</a><br/>
-                        <muted>{{x.content}}</muted>
+                    <p><a href="#">{{data.nickName}}</a><br/>
+                        <muted>{{data.content}}</muted>
                     </p>
                 </div>
             </div>
