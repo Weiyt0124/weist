@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by ${Weiyt} on 2017/8/7.
+ * @author weiyt
  */
 public interface MessageBoardService {
     /**
@@ -12,7 +12,7 @@ public interface MessageBoardService {
      *  @Author Wyt
      *
      *  @Date 2017/9/11 14:22
-     *
+     *  @return map
      */
     List<Map<String,Object>> replyList();
 }

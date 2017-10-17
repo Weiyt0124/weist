@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ${Weiyt} on 2017/6/8.
+ * @author weiyt
  */
 @Controller
 @RequestMapping("user")
@@ -34,7 +34,7 @@ public class UserController extends BaseController{
      */
     @RequestMapping("/findUserName")
     public @ResponseBody Map<String, Object> findUserName(HttpServletRequest request) {
-       Map<String, Object> result = new HashMap<>();
+       Map<String, Object> result = new HashMap<>(16);
         String nickName = (String) request.getSession().getAttribute("user");
         result.put("nickName",nickName);
         return result;
@@ -45,7 +45,7 @@ public class UserController extends BaseController{
      */
     @RequestMapping("/findUserInfo")
     public @ResponseBody Map<String, Object> findUserInfo(HttpServletRequest request) {
-       Map<String, Object> result = new HashMap<>();
+       Map<String, Object> result = new HashMap<>(16);
         String id = (String) request.getSession().getAttribute("id");
         UserInfo userInfo = userService.findUserInfo(id);
         result.put("userInfo",userInfo);

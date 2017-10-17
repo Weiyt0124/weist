@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Created by ${Weiyt} on 2017/8/2.
+ * @author weiyt
  */
 @Configuration
 public class WebSecurityConfig extends WebMvcConfigurerAdapter {
@@ -50,9 +50,9 @@ public class WebSecurityConfig extends WebMvcConfigurerAdapter {
         public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
                 throws Exception {
             HttpSession session = request.getSession();
-            if (session.getAttribute(SESSION_KEY) != null)
+            if (session.getAttribute(SESSION_KEY) != null) {
                 return true;
-
+            }
             // 跳转登录
             String url = "/login";
             response.sendRedirect(url);

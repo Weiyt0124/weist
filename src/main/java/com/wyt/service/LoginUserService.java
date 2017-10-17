@@ -3,11 +3,14 @@ package com.wyt.service;
 import java.util.Map;
 
 /**
- * Created by ${Weiyt} on 2017/7/31.
+ * @author weiyt
  */
 public interface LoginUserService {
     /**
-    *   login
-    */
+     *  登陆
+     *  @Author Wyt
+     *  @param param
+     *  @return map
+     */
     Map<String, Object> login(Map<String, Object> param);
 }

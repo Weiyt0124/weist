@@ -4,9 +4,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Update;
 
 import java.util.Map;
-
 /**
- * Created by ${Weiyt} on 2017/8/7.
+ *  @author  Wyt
  */
 @Mapper
 public interface UserMapper {

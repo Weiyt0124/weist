@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ${Weiyt} on 2017/7/31.
+ *  @author  Wyt
  */
 @Service("LoginUserServiceImpl")
 public class LoginUserServiceImpl implements LoginUserService {
@@ -19,7 +19,7 @@ public class LoginUserServiceImpl implements LoginUserService {
     LoginUserMapper loginUserMapper;
     @Override
     public Map<String, Object> login(Map<String, Object> param) {
-        Map<String, Object> result = new HashMap<>();
+        Map<String, Object> result = new HashMap<>(16);
 
         UserInfo userInfo = loginUserMapper.findUserById(param);
         if(userInfo == null){

@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import java.sql.Date;
 
 /**
- * Created by ${Weiyt} on 2017/8/7.
+ * @author weiyt
  */
 @Entity
 @Table(name = "reply")
