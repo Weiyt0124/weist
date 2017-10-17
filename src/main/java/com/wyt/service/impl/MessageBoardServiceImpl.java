@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by ${Weiyt} on 2017/8/7.
+ *  @author  Wyt
  */
 @Service
 public class MessageBoardServiceImpl implements MessageBoardService {

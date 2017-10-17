@@ -9,8 +9,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * 时间格式化工具类
- *
+ * @author weiyt
  */
 public class DateUtil {
 	
@@ -119,7 +118,7 @@ public class DateUtil {
     public static String formatShortDate(Date date) {
 		return formatDate(date, DEFAULT_SHORT_DATE_PATTERN);
 	}
-    /**/
+
     private static String formatDate(Date date, DateFormat dateFormat) {
     	if(date != null) {
     		try {
@@ -278,7 +277,7 @@ public class DateUtil {
 
 	public static int intervalWeeks(Date date1, Date date2) {
     	long interval = date1.getTime() - date2.getTime();
-    	return Long.valueOf(interval/604800000l).intValue();
+    	return Long.valueOf(interval/604800000L).intValue();
     }
 	
 	

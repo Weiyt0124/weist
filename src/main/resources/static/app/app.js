@@ -92,11 +92,11 @@ angular
 
                 }).success(function(req){
                     if(req){
+                        $("#close").click();
                         layer.msg('操作成功!', {
                             icon: 1,
                             time: 1000
                         });
-                        $('#changePassword').modal('hide')
                         $location.path("index")
                     }else{
                         alert('修改失败!');

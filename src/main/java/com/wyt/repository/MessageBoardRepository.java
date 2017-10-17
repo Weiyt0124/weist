@@ -4,7 +4,7 @@ import com.wyt.entity.MessageBoard;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
- * Created by ${Weiyt} on 2017/9/11.
+ * @author weiyt
  */
 public interface MessageBoardRepository extends JpaRepository<MessageBoard,Long> {
 }

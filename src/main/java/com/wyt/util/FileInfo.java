@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  * 文件信息对象
- * author hc.L
+ * @author hc.L
  */
 public class FileInfo {
 

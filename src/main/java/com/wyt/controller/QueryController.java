@@ -12,18 +12,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ${Weiyt} on 2017/7/5.
+ * @author weiyt
  */
 @Controller
 @RequestMapping(value = "iQuery")
 public class QueryController {
-    public static final String APPKEY = "2cb3463ef01b547b";// 你的appkey
+    /**
+     *  APPKEY
+     */
+    public static final String APPKEY = "2cb3463ef01b547b";
     public static final String URL = "http://api.jisuapi.com/iqa/query";
 
     @RequestMapping(value = "iQuery", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String, Object> Get(@RequestParam String queryContent) {
-        Map<String, Object> resultMap = new HashMap<>();
+    public Map<String, Object> get(@RequestParam String queryContent) {
+        Map<String, Object> resultMap = new HashMap<>(16);
         String result = null;
         String url = URL + "?appkey=" + APPKEY + "&question=" + queryContent;
 

@@ -6,9 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Created by ${Weiyt} on 2017/7/31.
+ * @author weiyt
  */
-
 @Entity
 @Table(name = "user")
 public class UserInfo {

@@ -11,10 +11,12 @@ import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
- * Created by ${Weiyt} on 2017/6/8.
+ * @author weiyt
  */
 @Controller
 public class LoginController {
+
+    private String flag= "flag";
 
     @Autowired
     private LoginUserService loginUserService;
@@ -37,7 +39,7 @@ public class LoginController {
     @ResponseBody
     Map<String, Object> loginPost(@RequestParam Map<String, Object> param, HttpSession session) {
         Map<String, Object> result = loginUserService.login(param);
-        if (!(Boolean) result.get("flag")) {
+        if (!(Boolean) result.get(flag)) {
             return result;
         }
         // 设置session

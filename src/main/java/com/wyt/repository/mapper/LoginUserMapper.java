@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.Map;
 
 /**
- * Created by ${Weiyt} on 2017/7/31.
+ * @author weiyt
  */
 @Mapper
 public interface LoginUserMapper {
