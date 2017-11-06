@@ -26,7 +26,8 @@ a, a:hover, a:focus {
 }
 ::selection {
 
-    background: #68dff0;
+    /*background: #68dff0;*/
+    background: #424a5d;
     color: #fff;
 }
 ::-moz-selection {
@@ -2213,11 +2214,23 @@ label {
 
 /*footer*/
 .site-footer {
-    background: #68dff0;
+    /*background: #68dff0;*/
+    background: #424a5d;
     color: #fff;
     padding: 10px 0;
 }
+.forum-title {
+    color: #1a3959;
+    font-size:0.890em;
+    width: 838px;
+    padding-left: 30px;
+}
 
+.forum-read_num {
+    color: rgb(217, 150, 161);
+    font-size:1.067em;
+    width: 96px;
+}
 
 .go-top {
     margin-right: 1%;

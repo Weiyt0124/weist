@@ -1,7 +1,7 @@
 /**
  * Created by 艾泽拉斯国家地理 on 2017/8/1.
  */
-angular.module("myApp", []).controller("LoginForm", ['$scope', '$http', function ($scope, $http) {
+angular.module("myApp", []).controller("loginForm", ['$scope', '$http', function ($scope, $http) {
         $scope.submit=function(){
             var param = {
                 userName: $scope.uname,

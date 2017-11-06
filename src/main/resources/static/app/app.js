@@ -3,7 +3,7 @@
  */
 
 angular
-    .module('myApp', ['ui.router'
+    .module('myApp', ['ui.router','myApp.forum','myApp.forumService'
     ])
     .constant("myAppConfig", {
         prefix: "/"
@@ -23,11 +23,12 @@ angular
                 })
                 .state('buttons', {
                     url: '/buttons',
-                    templateUrl: myAppConfig.prefix + 'app/buttons.html',
+                    templateUrl: myAppConfig.prefix + 'app/buttons.html'
                 })
-                .state('general', {
-                    url: '/general',
-                    templateUrl: myAppConfig.prefix + 'app/general.html'
+                .state('forum', {
+                    url: '/forum',
+                    templateUrl: myAppConfig.prefix + 'app/forum/views/list.html',
+                    controller:'forumCtrl'
                 })
                 .state('panels', {
                     url: '/panels',
@@ -35,7 +36,7 @@ angular
                 })
 
         }])
-    .controller('indexController', ["$scope", "$http", "$location", function ($scope, $http,$location) {
+    .controller('indexController', ["$scope", "$http", "$location", function ($scope, $http, $location) {
         $http.get("user/findUserName").success(function (res) {
             $scope.nickName = res.nickName;
         })
@@ -55,13 +56,13 @@ angular
          *  修改密码
          */
         $scope.openPasswordModal = function () {
-          $("#passwordModal").modal();
+            $("#passwordModal").modal();
         }
         $("#modifyPassword").validate({
             errorPlacement: function (error, element) {
                 $(element).parent('div').append(error);
             },
-            onkeyup : false,
+            onkeyup: false,
             rules: {
                 password: {
                     required: true
@@ -83,28 +84,28 @@ angular
                     password: $scope.password
                 }
                 $http({
-                    method:'post',
-                    url:'user/changePassword',
+                    method: 'post',
+                    url: 'user/changePassword',
                     data: $.param(param),
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
                     }
 
-                }).success(function(req){
-                    if(req){
+                }).success(function (req) {
+                    if (req) {
                         $("#close").click();
                         layer.msg('操作成功!', {
                             icon: 1,
                             time: 1000
                         });
                         $location.path("index")
-                    }else{
+                    } else {
                         alert('修改失败!');
                     }
                 })
             }
         })
-        $scope.openModifyAvatar =function () {
+        $scope.openModifyAvatar = function () {
             $("#avatarModal").modal();
         }
     }])

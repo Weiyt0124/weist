@@ -1,42 +1,34 @@
 package com.wyt.entity;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import java.sql.Date;
+import java.util.Date;
 
 /**
- * @author weiyt
+ * @author 艾泽拉斯国家地理
+ * @create 2017/11/6
  */
 @Entity
-@Table(name = "reply")
-public class
-MessageBoard {
+@Table(name = "forum")
+public class Forum {
     @Id
-    String id;
+    String id ;
+
     @Column(name = "uid")
     String userId;
 
-    @Column(name = "fid")
-    String forumId;
-
     String title;
+
     String content;
-    Integer weight;
+
     @Column(name = "create_time")
     Date createTime;
 
     @Column(name = "update_time")
     Date updateTime;
-
-    public String getForumId() {
-        return forumId;
-    }
-
-    public void setForumId(String forumId) {
-        this.forumId = forumId;
-    }
 
     public String getId() {
         return id;
@@ -68,14 +60,6 @@ MessageBoard {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public Integer getWeight() {
-        return weight;
-    }
-
-    public void setWeight(Integer weight) {
-        this.weight = weight;
     }
 
     public Date getCreateTime() {

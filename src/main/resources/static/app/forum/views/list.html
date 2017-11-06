@@ -1,0 +1,20 @@
+<section class="wrapper" ng-init="findForumList()">
+    <div class="row mt">
+        <div class="col-md-12">
+            <div class="content-panel" style="background-color:#fff0cd">
+                <table class="table">
+                    <!--<h4><i class="fa fa-angle-right"></i>艾泽拉斯国家地理</h4>-->
+                    <!--<hr>-->
+                    <tbody>
+                    <tr ng-repeat="data in data">
+                        <td class="forum-read_num" align="center">{{data.id}}</td>
+                        <td class="forum-title">{{data.title}}</td>
+                        <td style="" align="center">{{data.userId}}</td>
+                        <td style="width: 216px;">{{data.createTime| date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div><!-- /content-panel -->
+        </div><!-- /col-md-12 -->
+    </div><!-- /row -->
+</section>
