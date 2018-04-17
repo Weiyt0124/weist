@@ -56,14 +56,5 @@ public class LoginController {
         return "redirect:/login";
     }
 
-
-//    @RequestMapping(value = "/login", method = RequestMethod.POST)
-//    @ResponseBody
-//    public Map<String, Object> login(@RequestParam Map<String, Object> param) {
-//
-//        Map<String, Object> result = loginUserService.login(param);
-//
-//        return result;
-//    }
 }
 
